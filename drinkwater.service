@@ -1,0 +1,11 @@
+[Unit]
+Description=Run drinkwater.sh
+
+[Service]
+ExecStart=/usr/bin/drinkWater
+User=%I
+Restart=always
+RestartSec=3600s
+
+[Install]
+WantedBy=multi-user.target
