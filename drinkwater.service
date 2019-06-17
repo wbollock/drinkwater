@@ -2,10 +2,13 @@
 Description=Run drinkwater.sh
 
 [Service]
-ExecStart=/usr/bin/drinkWater
-User=%I
+ExecStart=/bin/sh -c /home/wbollock/projects/bash/drinkWater/drinkWater.sh
+User=wbollock
 Restart=always
 RestartSec=3600s
 
 [Install]
 WantedBy=multi-user.target
+
+[Service]
+Environment=DISPLAY=:0 XAUTHORITY=/home/me/.Xauthority
